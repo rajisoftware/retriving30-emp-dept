@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/c2.css' %}">
+</head>
+<body>
+    <center>
+        <h1 style="color:brown">display emp table</h1>
+        <table border="3px">
+            <tr class="pooji">
+                <th>empno</th>
+                <th>ename</th>
+                <th>job</th>
+                <th>mgr</th>
+                <th>hiredate</th>
+                <th>sal</th>
+                <th>comm</th>
+                <th>deptno</th>
+            </tr>
+            {% for eo in emp %}
+               <tr>
+                <td id="r">{{ eo.empno }}</td>
+                <td id="s">{{ eo.ename }}</td>
+                <td id="p">{{ eo.job }}</td>
+                <td id="su">{{ eo.mgr }}</td>
+                <td id="rajesh">{{ eo.hiredate }}</td>
+                <td id="uma">{{ eo.sal }}</td>
+                <td id="divya">{{ eo.comm }}</td>
+                <td id="kiran">{{ eo.deptno.deptno }}</td>
+               </tr>
+            {% endfor %}
+        </table>
+    </center>
+    
+</body>
+</html>
